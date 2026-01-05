@@ -64,10 +64,23 @@ namespace calculadora
             Console.Clear();
 
             Console.WriteLine("Primeiro Valor:");
-            float v1 = float.Parse(Console.ReadLine());
+            float v1;;
+            if(!float.TryParse(Console.ReadLine(),out v1))
+                {
+                    Console.WriteLine("Digite somente números");
+                    Console.ReadKey();
+                    return;
+                }
             Console.WriteLine("");
+            
             Console.WriteLine("Segundo Valor:");
-            float v2 = float.Parse(Console.ReadLine());
+            float v2;
+            if(!float.TryParse(Console.ReadLine(),out v2))
+                {
+                    Console.WriteLine("Digite somente números");
+                    Console.ReadKey();
+                    return;
+                }
 
             Console.WriteLine("");
 
@@ -90,6 +103,7 @@ namespace calculadora
                     Console.ReadKey();
                     return;
                 }
+                
             Console.WriteLine("");
 
             Console.WriteLine("Segundo Valor:");
@@ -116,7 +130,7 @@ namespace calculadora
 
             Console.WriteLine("Primeiro Valor:");
             float v1;
-            if(float.TryParse(Console.ReadLine(),out v1))
+            if(!float.TryParse(Console.ReadLine(),out v1))
                 {
                     Console.WriteLine("Digite somente números");
                     Console.ReadKey();
@@ -126,7 +140,7 @@ namespace calculadora
 
             Console.WriteLine("Segundo Valor:");
             float v2;
-            if(float.TryParse(Console.ReadLine(), out v2))
+            if(!float.TryParse(Console.ReadLine(), out v2))
                 {
                     Console.WriteLine("Digite somente números");
                     Console.ReadKey();
@@ -147,7 +161,7 @@ namespace calculadora
 
             Console.WriteLine("Primeiro Valor:");
             float v1;
-            if(float.TryParse(Console.ReadLine(),out v1))
+            if(!float.TryParse(Console.ReadLine(),out v1))
                 {
                     Console.WriteLine("Digite somente números");
                     Console.ReadKey();
@@ -156,7 +170,13 @@ namespace calculadora
             Console.WriteLine("");
 
             Console.WriteLine("Segundo Valor:");
-            float v2 = float.Parse(Console.ReadLine());
+            float v2;
+            if(!float.TryParse(Console.ReadLine(),out v2))
+                {
+                    Console.WriteLine("Digite somente números");
+                    Console.ReadKey();
+                    return;
+                }
 
             Console.Write("");
 
